@@ -37,14 +37,14 @@ angular
 
         })
 
-    })
 
-.when('/uploadCart', {
-    templateUrl: 'views/uploadCart.html',
-    controller: 'uploadCartCtrl',
-    controllerAs: 'uploadCart'
+        .when('/uploadCart', {
+                templateUrl: 'views/uploadCart.html',
+                controller: 'uploadCartCtrl',
+                controllerAs: 'uploadCart'
 
-        .otherwise({
-        redirectTo: '/'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
     });
-});
