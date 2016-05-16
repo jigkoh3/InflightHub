@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/uploadCart', {
+        templateUrl: 'views/uploadCart.html',
+        controller: 'uploadCartCtrl',
+        controllerAs: 'uploadCart'
+      })
       .otherwise({
         redirectTo: '/'
       });
