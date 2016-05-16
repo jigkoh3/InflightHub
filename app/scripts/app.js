@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/setupCart', {
+        templateUrl: 'views/setupCart.html',
+        controller: 'setupCartCtrl',
+        controllerAs: 'setupCart'
+      })
       .otherwise({
         redirectTo: '/'
       });
