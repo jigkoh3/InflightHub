@@ -29,17 +29,17 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-<<<<<<< HEAD
+
       .when('/setupCart', {
         templateUrl: 'views/setupCart.html',
         controller: 'setupCartCtrl',
         controllerAs: 'setupCart'
-=======
+ })
       .when('/uploadCart', {
         templateUrl: 'views/uploadCart.html',
         controller: 'uploadCartCtrl',
         controllerAs: 'uploadCart'
->>>>>>> 1ce7b7f29f109ebda60d85433472038843ee64c3
+
       })
       .otherwise({
         redirectTo: '/'
