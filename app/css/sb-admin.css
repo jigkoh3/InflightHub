@@ -225,3 +225,8 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
+.ul-bar {
+    background-color: #222222;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

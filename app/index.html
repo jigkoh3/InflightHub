@@ -1,10 +1,13 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="">
+    <title></title>
+    
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -17,8 +20,10 @@
 
      <link href="css/bootstrap.css" rel="stylesheet">
 
+
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -43,7 +48,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <img src="images/42.png" alt="I'm Yeoman" style="padding: 4px 0px 0px 4px;">
+                <i class="fa fa-fw fa-plane fa-2x" style="color:white;"></i>
+                <!-- <a class="navbar-brand" href="index.html">SB Admin</a> -->
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -67,7 +74,7 @@
                             </a>
                         </li>
                         <li class="message-preview">
-                            <a href="#">
+                            <a ng-href="#">
                                 <div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
@@ -131,7 +138,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#/" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -150,43 +157,50 @@
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" >
+                <ul class="nav navbar-nav side-nav ul-bar" >
                     <li>
-                        <a ng-href="#/setupCart"><i class="fa fa-fw fa-dashboard"></i> Setup Cart</a>
+                        <a ng-href="#/setupCart"><i class="fa fa-fw fa-shopping-cart"></i> Setup Cart</a>
                     </li>
                     <li>
-                        <a ng-href="#/uploadCart"><i class="fa fa-fw fa-bar-chart-o"></i> Upload Cart</a>
+                        <a ng-href="#/uploadCart"><i class="fa fa-fw fa-plane"></i> Upload Cart</a>
                     </li>
                     <li>
-                        <a ng-href="#/about"><i class="fa fa-fw fa-table"></i> Tables</a>
+                        <a ng-href="#/blackList"><i class="fa fa-fw fa-credit-card"></i> Black List</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                        <a ng-href="#/promotionDiscount"><i class="fa fa-fw fa-suitcase"></i> Promotion /  Discount</a>
+
                     </li>
                     <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
+                        <a ng-href="#/comboProduct"><i class="fa fa-fw fa-cutlery"></i> Combo / Product</a>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                        <a ng-href="#/exchangeMoney"><i class="fa fa-fw fa-exchange"></i> Exchange Money</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-file-text"></i> View Reports <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a ng-href="#/dailyAmount">Daily Summary Sales Report By Amount</a>
                             </li>
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a ng-href="#/dailyFlight">Daily Summary Sales Report By Flight</a>
+                            </li>
+                            <li>
+                                <a ng-href="#/dailyIncluded">Daily Summary Sales Report By Qty (included redeem and free item)</a>
+                            </li>
+                            <li>
+                                <a ng-href="#/dailyExcluded">Daily Summary Sales Report By Qty (excluded redeem and free item)</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <!-- <li class="active">
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -196,14 +210,13 @@
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
-                
+              
+            
                 <div ng-view="">
                   
                 </div>
 
             </div>
-            <!-- /.container-fluid -->
 
         </div>
         <!-- /#page-wrapper -->
@@ -212,10 +225,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+ 
 
 
 
@@ -233,7 +243,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -248,6 +258,15 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+            <script src="js/jquery.js"></script> 
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
 
@@ -256,5 +275,7 @@
         <script src="scripts/controllers/uploadCart.js"></script>
 
         <!-- endbuild -->
+            <!-- jQuery -->
+
 </body>
 </html>
