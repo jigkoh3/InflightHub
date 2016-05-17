@@ -85,8 +85,6 @@ angular
 
         })
 
-
-
         .when('/uploadCart', {
                 templateUrl: 'views/uploadCart.html',
                 controller: 'uploadCartCtrl',
